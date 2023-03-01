@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Contenido del HEADER*/
+.header  {
+    font-size: 2.5rem;
+    background-color: #1d2742;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header .ancla {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    font-size: 1.5rem;
+    gap: 1rem;
+}
+.ancla li {
+    margin-right: 20px;
+  }
+
+  .ancla li:last-child {
+    margin-right: 0;
+  }
+
+  .ancla li a {
+    text-decoration: none;
+    color: white;
+  }
+  .top-header { 
+      display: flex;
+      justify-content: center;
+      margin: 1rem;
+  }
+  
+  .bottom-header {
+      padding-top: 1rem;
+  }
+
+
+
+ 
+ /*Contenido general del body, main y demas */ 
+
+body{
+    margin-bottom: 2rem;
+    background-color: rgba(200, 183, 221, 0.966);
+}
+
+main {
+    background-color: rgb(29, 109, 201);
+    padding: 20px 0;
+    width: 80%;
+    margin: auto;
+    border-radius: 0 0 20px 20px;
+}
+
+ .container {
+    font-size: 1.5rem;
+    width: 60vw;
+    background-color: white;
+    margin: 50px auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+}
+
+
+button {
+    border: none;
+    border-radius: 5rem;
+    margin-top: 10px;
+    width: 100%;
+}
+p {
+    margin: 5px 0;
+  }
+
+
+
+
+
+/* Estilos para la foto de perfil */
+.div-img {
+    background-color: rgb(29, 109, 201);
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px 20px 0 0;
+    padding-top: 30px;
+  }
+  
+.div-img img {
+    
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+
+
+ 
+  
+/*El MODAL dentro del div de "estudios" */  
+  .modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 1000%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
+}
+
+.modal-contenido {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.cerrar {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#modal-button:hover {
+
+	cursor: pointer;
+}
+
+.modal-contenido div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*Boton de volver al header */
+#home {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  #boton-home {
+    background-color: white;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #boton-home img {
+    width: 24px;
+    height: 24px;
+    
+  }
+
+
+
+/*Contenido del FOOTER */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    height: 2.5rem;
+    margin-top: 1rem;
+  }
+  
+  .footer-div {
+    display: flex;
+    align-items: center;
+  }
+  
+  #arg {
+    width: 50px; 
+    margin-right: 20px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }

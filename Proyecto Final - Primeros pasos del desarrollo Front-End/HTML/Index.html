@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+
+	<header class="header">
+        <div class="top-header">
+
+            <h1>Curriculum Vitae</h1>
+        </div>
+
+        <div class="bottom-header">
+            <nav>
+                <ul class="ancla">
+                  <li><a href="#info-personal">Informacion personal</a></li>
+                  <li><a href="#estudios">Estudios</a></li>
+                  <li><a href="#experiencia">Experiencia laboral</a></li>
+                  <li><a href="#habilidades">Habilidades</a></li>
+                </ul>
+              </nav>
+        </div>
+	</header>
+    <div class="div-img">
+   
+
+           <img src="../img/foto.jpg" alt="Foto de perfil">
+   
+    </div>
+    <main> <!-- el main con los 4 divs correspondientes a la informacion, cada .container es una diferente categoria           -->
+        <div class="container">
+            <h1 id="info-personal">Informacion Personal</h1>
+            <p>Nombre completo: Juan Pérez</p>
+            <p>Dirección de residencia: Calle 123 # 45-67, Bogotá, Colombia</p>
+            <p>Número de teléfono: +57 300 123 4567</p>
+            <p>Dirección de correo electrónico: juan.perez@email.com</p>
+            <p>Fecha de nacimiento: 1 de enero de 1990</p>
+            <p>Estado civil: Soltero</p>
+            <p>Nacionalidad: Colombiana</p>
+
+        </div>
+        <div class="container">
+            <h1 id="estudios">Estudios</h1>
+            <p>Títulos obtenidos: Ingeniero de Sistemas</p>
+            <p>Nombre de la institución educativa: Universidad Nacional de Colombia</p>
+            <p>Años de estudio: 5 años</p>
+            <p>Fecha de graduación: Diciembre de 2015</p>
+            <p>Promedio de calificaciones: 4.5/5.0</p>
+            <button id="modal-button">Otros</button>
+            <div id="modal" class="modal">
+                <div class="modal-contenido">
+                    <span class="cerrar">&times;</span>
+                    <h2>Educación Secundaria</h2>                        
+                    <p>Hogwarts escuela de magia y hechiceria (2001-2008)</p>                  
+                    <p>Tecnicatura en Artes Mágicas y Artes Oscuras</p>               
+                    <p>Casa: Slytherin</p>
+                    <div>
+                       <img src="../img/hogwards.jpg" alt="hogwarts" style="max-height: 10rem;">
+                       <img src="../img/sly2.jpg" alt="slytherin" style="max-height: 10rem;">
+                    </div>
+                    <footer style="background-color: white; padding: auto;"><h6 style="color: rgb(173, 73, 5);">Este modal lo hice para usar un poco de JS y para molestar un poco ja</h6></footer>
+                
+                
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 id="experiencia">Experiencia laboral:</h1>
+            <p>Nombre de la empresa: Microsoft Colombia</p>
+            <p>Cargo desempeñado: Ingeniero de Software</p>
+            <p>Fechas de inicio y finalización del empleo: Marzo de 2016 - presente</p>
+            <p>Descripción de las responsabilidades y tareas realizadas: Desarrollo de software para proyectos de clientes corporativos, colaboración con otros equipos de ingeniería y producto para la entrega de soluciones de software de alta calidad, participación en el diseño y arquitectura de sistemas de software escalables, etc.</p>
+            <p>Logros y reconocimientos relevantes: Liderazgo en el equipo de desarrollo de software para el proyecto más importante de la empresa, participación en la entrega de proyectos de software para clientes de la talla de Banco de Bogotá, Grupo Éxito, etc.</p>
+            <p>Referencias de contacto: Juanita Pérez (Gerente de Ingeniería de Software) - jperez@microsoft.com</p>
+        </div>
+        <div class="container">
+            <h1 id="habilidades">Habilidades:</h1>
+            <p>Idiomas: Español (nativo), Inglés (avanzado), Parsel (avanzado)</p>
+            <p>Habilidades informáticas y tecnológicas: Lenguajes de programación (Java, Python, C++, JavaScript), herramientas de desarrollo (Eclipse, Visual Studio, Git), bases de datos relacionales y no relacionales (Oracle, MySQL, MongoDB), tecnologías web (HTML, CSS, AngularJS), etc.</p>
+            <p>Habilidades sociales y de comunicación: Trabajo en equipo, liderazgo, resolución de problemas, pensamiento crítico, etc.</p>
+            <p>Habilidades técnicas y específicas para el trabajo: Experiencia en el desarrollo de software en entornos empresariales, conocimientos en la gestión de proyectos de software, experiencia en el diseño y arquitectura de sistemas de software escalables, etc.</p>
+
+        </div>
+    </main>
+    <div id="home">
+        <button id="boton-home"><img src="../img/home.png" alt="boton para ir a home"></button>
+      </div>
+    <footer>
+        <div class="footer-div">
+     
+
+                <img id="arg" src="../img/arg.png" alt="icono argentina programa">
+            
+            <p>   Proyecto Final - Primeros pasos del desarrollo Front End </p>
+            </div>
+    </footer>
+</body>
+<!--      Script para el modal en la solapa de Estudios                                   -->
+<script>
+
+
+
+    var modal = document.getElementById("modal");
+    var modalButton = document.getElementById("modal-button");
+    var close = document.getElementsByClassName("cerrar")[0];
+    
+    modalButton.onclick = function() {
+        modal.style.display = "block";
+    }
+    
+    close.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+
+<!--    Script para el boton de volver a home                       -->
+<script>
+    const button = document.querySelector('#boton-home');
+
+button.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+</script>
+</html>
